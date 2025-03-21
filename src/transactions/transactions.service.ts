@@ -26,6 +26,7 @@ export class TransactionsService {
       where: { userId },
       take: limit,
       skip: (page - 1) * limit,
+      order: { createdAt: "DESC" },
     });
   
     return {
